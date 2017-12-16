@@ -1,21 +1,20 @@
 package bonnetZone;
 
-import main.IDisplayable;
+import main.Displayable;
 
-public class Ruche implements IDisplayable {
+public class Ruche implements Displayable {
+	
+	private String name = "La ruche";		// le nom de la ruche.
+	private String status = "EN ATTENTE";	// de l'affichage libre - le contenu de cette variable sera imprimé avec la ruche.
+	private String colour = "0x0000CC";		// code hex pour du noir : "0x000000";
 
-	private String colour = "0x0000CC";
-	@Override public String getColour() {return colour;}
-	@Override public int getId() {return id;}
-	@Override public String getName() {return name;}
-	@Override public String getStatus() {return status;}
+	@Override public String getColour()	{	return colour;	}
+	@Override public String getName()	{	return name;	}
+	@Override public String getStatus()	{	return status;	}
 	
-	
-	// ===== travailler ici ===== //
-	
-	private int id = 1;
-	private String name;
-	private String status;
+	// ============================================================== //
+	// =====					Correction						===== //
+	// ============================================================== //
 	
 	private Integer miel = 0;
 	
