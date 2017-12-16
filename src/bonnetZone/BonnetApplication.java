@@ -1,13 +1,34 @@
 package bonnetZone;
 
-public class BonnetApplication {
+import java.util.ArrayList;
+import main.IAbeilleApplication;
+
+public class BonnetApplication implements IAbeilleApplication {
+	
+	@Override public ArrayList<Abeille> getAbeilles() {return toutesLesAbeilles;}
+	@Override public Ruche getRuche() {return ruche;}
+	@Override public void receiveInput() {}
+	
+	
+	// ===== travailler ici ===== //	
+	
+	private Ruche ruche;
+	
+	private ArrayList<Abeille> toutesLesAbeilles;
+	private int id = 0;
 
 	public BonnetApplication() {
-		// TODO Auto-generated constructor stub
+		ruche = new Ruche();
+		toutesLesAbeilles = new ArrayList<>();
+		addAbeille();
+	}
+	
+	private void addAbeille() {
+		toutesLesAbeilles.add(new Abeille(++id, ruche));
 	}
 	
 	public void run() {
-		
+		ruche.update();
+		toutesLesAbeilles.forEach((a) -> a.update());
 	}
-
 }
