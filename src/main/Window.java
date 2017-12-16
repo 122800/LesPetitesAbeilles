@@ -47,20 +47,14 @@ public class Window extends JPanel implements KeyListener {
 		curId = 0;
 		
 		// abeilles
-<<<<<<< Updated upstream
-		abeilles.forEach((a) -> {
-			paintDisplayable(g, a, 0);
-		});
-		
-		// ruche
-		paintDisplayable(g, ruche, getWidth()-W);
-=======
 		if(abeilles.size() > 0) {
 			abeilles.forEach((a) -> {
 				paintDisplayable(g, a, 0, curId++);
 			});
 		}
->>>>>>> Stashed changes
+		
+		// ruche
+		paintDisplayable(g, ruche, getWidth()-W, 0);
 	}
 	
 	private void paintDisplayable(Graphics g, Displayable d, int x, int curId) {
