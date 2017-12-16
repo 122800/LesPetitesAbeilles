@@ -40,6 +40,6 @@ public class Main {
 
 	private static void init() {
 		lesPetitesAbeilles = new BonnetApplication();
-		window = new Window(lesPetitesAbeilles.getAbeilles(), lesPetitesAbeilles.getRuche());
+		window = new Window(lesPetitesAbeilles.getAbeilles());
 	}
 }
