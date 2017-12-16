@@ -1,6 +1,6 @@
 package main;
 
-public interface Displayable {
+public interface IDisplayable {
 	public String getColour();
 	public int getId();
 	public String getName();

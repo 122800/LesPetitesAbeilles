@@ -1,18 +1,14 @@
 package bonnetZone;
 
-import main.Displayable;
+import main.IDisplayable;
 
-public class Abeille implements Displayable {
+public class Abeille implements IDisplayable {
 
 	private String colour = "0xCC0000";
-	@Override
-	public String getColour() {return colour;}
-	@Override
-	public int getId() {return id;}
-	@Override
-	public String getName() {return name;}
-	@Override
-	public String getStatus() {return status;}
+	@Override public String getColour() {return colour;}
+	@Override public int getId() {return id;}
+	@Override public String getName() {return name;}
+	@Override public String getStatus() {return status;}
 	
 	
 	// ===== travailler ici ===== //

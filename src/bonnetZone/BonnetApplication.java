@@ -1,9 +1,9 @@
 package bonnetZone;
 
 import java.util.ArrayList;
-import main.AbeilleApplication;
+import main.IAbeilleApplication;
 
-public class BonnetApplication implements AbeilleApplication {
+public class BonnetApplication implements IAbeilleApplication {
 	
 	@Override
 	public ArrayList<Abeille> getAbeilles() {return toutesLesAbeilles;}
@@ -14,7 +14,7 @@ public class BonnetApplication implements AbeilleApplication {
 	// ===== travailler ici ===== //
 	
 	@Override
-	public void takeInput() {
+	public void receiveInput() {
 		addAbeille();
 	}
 	

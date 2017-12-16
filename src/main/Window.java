@@ -11,7 +11,6 @@ import javax.swing.JPanel;
 
 import bonnetZone.Abeille;
 import bonnetZone.Ruche;
-import javafx.scene.input.KeyCode;
 
 public class Window extends JPanel implements KeyListener {
 	
@@ -53,7 +52,7 @@ public class Window extends JPanel implements KeyListener {
 		paintDisplayable(g, ruche, getWidth()-W);
 	}
 	
-	private void paintDisplayable(Graphics g, Displayable d, int x) {
+	private void paintDisplayable(Graphics g, IDisplayable d, int x) {
 		g.setColor(Color.decode(d.getColour()));
 		
 		int y = H * (d.getId()-1);
@@ -63,15 +62,11 @@ public class Window extends JPanel implements KeyListener {
 		g.drawString(d.getStatus(), x + 10, y+40);
 	}
 
-	@Override
-	public void keyPressed(KeyEvent e) {
-	}
+	@Override public void keyPressed(KeyEvent e) {}	
+	@Override public void keyTyped(KeyEvent e) {}
 
 	@Override
 	public void keyReleased(KeyEvent e) {
 		Main.sendInput(e.getKeyCode());
 	}
-
-	@Override
-	public void keyTyped(KeyEvent e) {}
 }

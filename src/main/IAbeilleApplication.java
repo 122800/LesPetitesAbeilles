@@ -5,9 +5,9 @@ import java.util.List;
 import bonnetZone.Abeille;
 import bonnetZone.Ruche;
 
-public interface AbeilleApplication {
+public interface IAbeilleApplication {
 	public List<Abeille> getAbeilles();
 	public Ruche getRuche();
 	
-	public void takeInput();
+	public void receiveInput();
 }

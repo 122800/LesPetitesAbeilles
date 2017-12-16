@@ -30,7 +30,7 @@ public class Main {
 	
 	public static void sendInput(int keyCode) {
 		if(keyCode == KeyEvent.VK_ENTER) {
-			lesPetitesAbeilles.takeInput();
+			lesPetitesAbeilles.receiveInput();
 		}
 	}
 	
