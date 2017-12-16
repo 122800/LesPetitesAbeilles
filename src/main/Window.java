@@ -39,23 +39,28 @@ public class Window extends JPanel implements KeyListener {
 	private static final int W = 200; 
 	private static final int H = 50; 
 	
+	private int curId = 0;
 	@Override
 	public void paintComponent(Graphics g) {
 		g.clearRect(0, 0, getWidth(), getHeight());
 		
+		curId = 0;
+		
 		// abeilles
-		abeilles.forEach((a) -> {
-			paintDisplayable(g, a, 0);
-		});
+		if(abeilles.size() > 0) {
+			abeilles.forEach((a) -> {
+				paintDisplayable(g, a, 0, curId++);
+			});
+		}
 		
 		// ruche
-		paintDisplayable(g, ruche, getWidth()-W);
+		paintDisplayable(g, ruche, getWidth()-W, 0);
 	}
 	
-	private void paintDisplayable(Graphics g, IDisplayable d, int x) {
+	private void paintDisplayable(Graphics g, Displayable d, int x, int curId) {
 		g.setColor(Color.decode(d.getColour()));
 		
-		int y = H * (d.getId()-1);
+		int y = H * (curId);
 		g.drawRect(x, y, W, H);
 		
 		g.drawString(d.getName(), x + 10, y+20);
