@@ -10,4 +10,5 @@ public interface IAbeilleApplication {
 	public Ruche getRuche();
 	
 	public void receiveInput();
+	public void run();
 }
