@@ -1,8 +1,8 @@
 package bonnetZone;
 
-import main.IDisplayable;
+import main.Displayable;
 
-public class Abeille implements IDisplayable {
+public class Abeille implements Displayable {
 
 	private String name;	// le nom de
 	private String status;	// de l'affichage libre - le contenu de cette variable sera imprimé pour chaque abeille

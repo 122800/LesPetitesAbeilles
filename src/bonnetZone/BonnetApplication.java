@@ -1,9 +1,9 @@
 package bonnetZone;
 
 import java.util.ArrayList;
-import main.IAbeilleApplication;
+import main.ContientDesAbeilles;
 
-public class BonnetApplication implements IAbeilleApplication {
+public class BonnetApplication implements ContientDesAbeilles {
 	
 	private ArrayList<Abeille> toutesLesAbeilles;
 	
