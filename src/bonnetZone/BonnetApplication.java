@@ -23,5 +23,6 @@ public class BonnetApplication implements IAbeilleApplication {
 	@Override public void run() {
 		// cette fonction sera appelée une fois par seconde.
 		// tu fais ce que tu veux avec :D
+		// essaie d'avoir au moins une abeille à l'affichage avant de te soucier de cette fonction.
 	}
 }
