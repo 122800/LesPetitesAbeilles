@@ -6,7 +6,6 @@ import main.IAbeilleApplication;
 public class BonnetApplication implements IAbeilleApplication {
 	
 	@Override public ArrayList<Abeille> getAbeilles() {return null;}
-	@Override public Ruche getRuche() {return null;}
 	@Override public void receiveInput() {}
 		
 	// ===== travailler ici ===== //

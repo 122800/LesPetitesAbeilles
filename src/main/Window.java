@@ -10,16 +10,14 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import bonnetZone.Abeille;
-import bonnetZone.Ruche;
 
 public class Window extends JPanel implements KeyListener {
 	
 	private JFrame container;
 	
-	public Window(ArrayList<Abeille> abeilles, Ruche ruche) {
+	public Window(ArrayList<Abeille> abeilles) {
 		
 		this.abeilles = abeilles;
-		this.ruche = ruche;
 		
 		container = new JFrame("Les Petites Abeilles");
 		container.setSize(450, 400);
@@ -34,7 +32,6 @@ public class Window extends JPanel implements KeyListener {
 	}
 	
 	private ArrayList<Abeille> abeilles;
-	private Ruche ruche;
 	
 	private static final int W = 200; 
 	private static final int H = 50; 
@@ -47,9 +44,6 @@ public class Window extends JPanel implements KeyListener {
 		abeilles.forEach((a) -> {
 			paintDisplayable(g, a, 0);
 		});
-		
-		// ruche
-		paintDisplayable(g, ruche, getWidth()-W);
 	}
 	
 	private void paintDisplayable(Graphics g, IDisplayable d, int x) {
