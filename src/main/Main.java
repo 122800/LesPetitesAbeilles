@@ -1,10 +1,12 @@
 package main;
 
+import bonnetZone.BonnetApplication;
+
 public class Main {
 	
 	public static boolean running = true;
-	
 	public static Window window;
+	public static BonnetApplication LesPetitesAbeilles;
 	
 	public static void main(String[] args) {
 		
@@ -12,7 +14,7 @@ public class Main {
 		
 		while(running) {
 			
-			loop();
+			LesPetitesAbeilles.run();
 			
 			try {
 				Thread.sleep(1000/1);
@@ -21,12 +23,9 @@ public class Main {
 			}
 		}
 	}
-	
-	public static void loop() {
-		// do stuff here?
-	}
-	
+
 	public static void init() {
 		window = new Window();
+		LesPetitesAbeilles = new BonnetApplication();
 	}
 }
